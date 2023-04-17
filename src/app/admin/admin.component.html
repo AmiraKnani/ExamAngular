@@ -1,0 +1,55 @@
+<!-- src/app/admin/admin.component.html -->
+<div class="container">
+    <h1>Gestion des utilisateurs</h1>
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="prenom">Prénom</label>
+        <input type="text" class="form-control" id="prenom" formControlName="prenom">
+      </div>
+      <div class="form-group">
+        <label for="nom">Nom</label>
+        <input type="text" class="form-control" id="nom" formControlName="nom">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" formControlName="email">
+      </div>
+      <div class="form-group">
+        <label for="profile">Profile</label>
+        <input type="text" class="form-control" id="profile" formControlName="profile">
+      </div>
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="valide" formControlName="valide">
+        <label class="form-check-label" for="valide">Valide</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Enregistrer</button>
+    </form>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Prénom</th>
+          <th scope="col">Nom</th>
+          <th scope="col">Email</th>
+          <th scope="col">Profile</th>
+          <th scope="col">Valide</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users; index as i">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{ user.prenom }}</td>
+          <td>{{ user.nom }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.profile }}</td>
+          <td>{{ user.valide }}</td>
+          <td>
+            <button class="btn btn-warning" (click)="editUser(i)">Modifier</button>
+            <button class="btn btn-danger" (click)="deleteUser(i)">Supprimer</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

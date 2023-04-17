@@ -1,0 +1,39 @@
+<div class="container">
+    <div *ngIf="currentUser && currentUser.profile === 'admin'">
+      <br>
+      <h2>Liste des utilisateurs</h2>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Prénom</th>
+            <th>Nom</th>
+            <th>Email</th>
+            <th>Profile</th>
+            <th>Valide</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of usersList">
+            <td>{{ user.prenom }}</td>
+            <td>{{ user.nom }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.profile }}</td>
+            <td>{{ user.valide }}</td>
+            <td>
+              <button class="btn btn-warning" >Update</button>
+              <button class="btn btn-danger" >Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <div *ngIf="currentUser && currentUser.profile === 'user'">
+        <br>
+      <h2>Bonjour, {{ currentUser.prenom }} {{ currentUser.nom }} !</h2>
+      <div class="alert alert-warning" role="alert">
+        Vous avez des restrictions d'autorisation.
+      </div>
+    </div>
+  </div>
+  

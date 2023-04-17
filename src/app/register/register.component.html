@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h2 class="text-center mt-5">Inscription</h2>
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="mt-4">
+          <div class="form-group">
+            <label for="prenom">Prénom</label>
+            <input type="text" id="prenom" class="form-control" formControlName="prenom" required>
+          </div>
+          <div class="form-group">
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" class="form-control" formControlName="nom" required>
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" class="form-control" formControlName="email" required>
+          </div>
+          <div class="form-group">
+            <label for="profile">Profile</label>
+            <select class="form-control" formControlName="profile" id="profile">
+              <option value="" disabled selected>Choose a profile</option>
+              <option value="admin">Admin</option>
+              <option value="user">User</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="password">Mot de passe</label>
+            <input type="password" id="password" class="form-control" formControlName="password" required>
+          </div>
+          <button type="submit" class="btn btn-primary" [disabled]="!registerForm.valid">Enregistrer</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

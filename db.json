@@ -1,0 +1,76 @@
+{
+  "Users": [
+    {
+      "Nom": "User1",
+      "Prenom": "PrenomUser1",
+      "email": "user1@gmail.com",
+      "password": "123456",
+      "profile": "admin",
+      "valide": "valide",
+      "id": 1
+    },
+    {
+      "Nom": "User2",
+      "Prenom": "PrenomUser2",
+      "email": "user2@gmail.com",
+      "password": "321",
+      "profile": "admin",
+      "valide": "valide",
+      "id": 2
+    },
+    {
+      "Nom": "User3",
+      "Prenom": "PrenomUser3",
+      "email": "user3@gmail.com",
+      "password": "123",
+      "profile": "user",
+      "valide": "non valide",
+      "id": 3
+    },
+    {
+      "Nom": "test",
+      "Prenom": "Prenomtest",
+      "email": "user1@pi.tn",
+      "password": "111",
+      "profile": "user",
+      "valide": "valide",
+      "id": 5
+    },
+    {
+      "Nom": "test3",
+      "Prenom": "Prenomtest3",
+      "email": "user3@pi.tn",
+      "password": "333",
+      "profile": "user",
+      "valide": "non valide",
+      "id": 7
+    },
+    {
+      "Nom": "test4",
+      "Prenom": "Prenomtest4",
+      "email": "user4@pi.tn",
+      "password": "555",
+      "profile": "admin",
+      "valide": "valide",
+      "id": 8
+    },
+    {
+      "prenom": "Amira",
+      "nom": "Knani",
+      "email": "amiraknani@gmail.com",
+      "password": "123456",
+      "profile": "user",
+      "valide": "false",
+      "id": 9
+    },
+    {
+      "prenom": "test",
+      "nom": "test",
+      "email": "test@gmail.com",
+      "password": "123456",
+      "profile": "user",
+      "valide": "false",
+      "id": 10
+    }
+  ]
+}
