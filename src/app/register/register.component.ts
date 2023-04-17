@@ -42,15 +42,15 @@ export class RegisterComponent implements OnInit {
       this.userApiService.addUser(newUser).subscribe(
         (response) => {
           console.log('Utilisateur ajouté avec succès:', response);
-          // Si l'inscription est réussie, redirigez l'utilisateur vers la page souhaitée.
+          
           this.router.navigate(['/']);
         },
         (error) => {
           console.error('Erreur lors de l\'ajout d\'un utilisateur:', error);
-          // Affichez un message d'erreur ou mettez en évidence les champs invalides.
+          
         }
       );
     } else {
-      // Affichez un message d'erreur ou mettez en évidence les champs invalides.
+      // Affichage d'un message d'erreur 
     }
   }}
